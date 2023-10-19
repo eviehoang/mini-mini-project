@@ -45,14 +45,13 @@ inquirer
 console.log(html)
 
 
+ fs.writeFile('log.txt', html, (err) =>
+   err ? console.error(err) : console.log('Success!')
+  );
+
     });
 
 
 
 
 
-
-
- fs.appendFile('log.txt', inputData(), (err) =>
-   err ? console.error(err) : console.log('Success!')
-  );

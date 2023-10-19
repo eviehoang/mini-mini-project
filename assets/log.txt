@@ -1,0 +1,11 @@
+<main class="d-flex justify-content-center m-5">
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">d</h5>
+      <h6 class="card-subtitle mb-2 text-muted">d</h6>
+      <p class="card-text">d</p>
+      <a href="#" class="card-link">d</a>
+      <a href="#" class="card-link">d</a>
+    </div>
+  </div>
+</main>
