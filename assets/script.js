@@ -31,7 +31,22 @@ inquirer
     .then((response) => {
         console.log(response)
        const html = 
-`<main class="d-flex justify-content-center m-5">
+`
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>Mini Project: Student Inquriing</title>
+</head>
+
+<body>
+<!-- Main -->
+<main class="d-flex justify-content-center m-5">
 <div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title">${response.username}</h5>
@@ -41,11 +56,21 @@ inquirer
       <a href="#" class="card-link">${response.linkedin}</a>
     </div>
   </div>
-</main>`
+</main>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+<!-- our script -->
+<script src="/assets/script.js"></script>
+</body>
+
+</html>
+`
 console.log(html)
 
 
- fs.writeFile('log.txt', html, (err) =>
+ fs.writeFile('something.html', html, (err) =>
    err ? console.error(err) : console.log('Success!')
   );
 
