@@ -1,3 +1,5 @@
+const inquirer = require('inquirer')
+const fs = require('fs')
 inquirer
     .prompt([
         {
@@ -28,8 +30,29 @@ inquirer
     ])
     .then((response) => {
         console.log(response)
-        response.confirm === response.password
-            ? console.log('Success!')
-            : console.log('You forgot your password already?!')
-    }
-    );
+       const html = 
+`<main class="d-flex justify-content-center m-5">
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">${response.username}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">${response.location}</h6>
+      <p class="card-text">${response.bio}</p>
+      <a href="#" class="card-link">${response.gitLink}</a>
+      <a href="#" class="card-link">${response.linkedin}</a>
+    </div>
+  </div>
+</main>`
+console.log(html)
+
+
+    });
+
+
+
+
+
+
+
+ fs.appendFile('log.txt', inputData(), (err) =>
+   err ? console.error(err) : console.log('Success!')
+  );
