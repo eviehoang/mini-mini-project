@@ -30,7 +30,11 @@ inquirer
     ])
     .then((response) => {
         console.log(response)
-       const html = 
+        console.log(html)
+        html
+
+    });
+      const html = 
 `<main class="d-flex justify-content-center m-5">
 <div class="card" style="width: 18rem;">
     <div class="card-body">
@@ -42,17 +46,12 @@ inquirer
     </div>
   </div>
 </main>`
-console.log(html)
-
-
-    });
 
 
 
 
 
 
-
- fs.appendFile('log.txt', inputData(), (err) =>
+ fs.writeFile('index.html', html, (err) =>
    err ? console.error(err) : console.log('Success!')
   );
